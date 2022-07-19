@@ -1,3 +1,24 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+  html {
+    font-family: "Barlow Semi Condensed", sans-serif;
+    font-weight: 600;
+  }
+}
+
+@layer components {
+  .container {
+    @apply mx-auto;
+    max-width: unset;
+    width: min(96%, 19.4375rem);
+  }
+
+  @media screen(lg) {
+    .container {
+      width: min(96%, 81.375rem);
+    }
+  }
+}
