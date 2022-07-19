@@ -1,5 +1,5 @@
 import { ItemType } from "@/components/item/item";
-import { useEffect } from "react";
+import { useEffect, useRef } from "react";
 import { pause } from "@/utilities/pause";
 import { useState } from "react";
 import { PickCard } from "../pick/pick";
@@ -9,19 +9,24 @@ export const StepTwo: React.FC<{
   userPick: ItemType;
 }> = ({ setHousePick, userPick }) => {
   const [pick, setPick] = useState<ItemType | null>(null);
+  const firstRun = useRef(true);
 
   useEffect(() => {
     const process = async () => {
       await pause(1000);
 
       const types = Object.values(ItemType);
-      setPick(types[Math.floor(Math.random() * types.length)]);
+      const value = types[Math.floor(Math.random() * types.length)];
+      setPick(value);
 
-      await pause(1000);
-      setHousePick(pick as ItemType);
+      await pause(1000);      
+      setHousePick(value as ItemType);
     };
 
-    process();
+    if (firstRun.current) {
+      process();
+      firstRun.current = false;
+    }
   }, []);
 
   return (

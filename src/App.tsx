@@ -1,8 +1,28 @@
 import { Header } from "./components/sections/header/header";
 import { GameSection } from "./components/sections/game/game";
+import { useState } from "react";
+import { GameResult } from "./utilities/eval-result";
 
+const getInitialValue = () => {
+  const value = localStorage.getItem("score");
+  if (!value) {
+    return 0;
+  } else return Number(value);
+};
 
 export default function App() {
+  const [score, setScore] = useState<number>(getInitialValue);
+
+  const processResult = (result: GameResult) => {
+    if (result === GameResult.WIN) {
+      setScore((prev) => {
+        const value = prev + 1;
+        localStorage.setItem("score", `${value}`);
+        return value;
+      });
+    }
+  };
+
   return (
     <>
       <main
@@ -11,8 +31,8 @@ export default function App() {
       `}
       >
         <div className="container flex flex-col items-center">
-          <Header score={12} />
-          <GameSection/>
+          <Header score={score} />
+          <GameSection processResult={processResult} />
         </div>
       </main>
     </>

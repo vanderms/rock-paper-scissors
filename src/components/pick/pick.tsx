@@ -10,7 +10,7 @@ export const PickCard: React.FC<{ text: string; type: ItemType | null }> = ({
         {type ? (
           <Item type={type} />
         ) : (
-          <div className="w-[6.875rem] h-[6.875rem] bg-[rgba(0,0,0,0.1)] rounded-full"></div>
+          <div className="w-[6.875rem] h-[6.875rem] bg-[rgba(0,0,0,0.1)] rounded-full lg:w-[14rem] lg:h-[14rem]"></div>
         )}
       </div>
       <p className="text-white font-bold tracking-widest [font-size:0.9375rem] lg:[font-size:1.5rem]">{text}</p>
