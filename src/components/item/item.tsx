@@ -23,7 +23,7 @@ const imageTable = {
 export const Item: React.FC<{ type: ItemType }> = ({ type }) => {
   return (
     <img
-      className="w-24 h-24 lg:h-[9.25rem] lg:w-[9.25rem] object-contain object-center"
+      className="absolute w-full h-full top-0 left-0 object-contain object-center"
       src={imageTable[type]}
       alt={type}
     />
