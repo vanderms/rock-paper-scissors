@@ -1,4 +1,5 @@
 import { Header } from "./components/sections/header/header";
+import { GameSection } from "./components/sections/game/game";
 
 
 export default function App() {
@@ -11,6 +12,7 @@ export default function App() {
       >
         <div className="container flex flex-col items-center">
           <Header score={12} />
+          <GameSection/>
         </div>
       </main>
     </>

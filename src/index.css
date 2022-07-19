@@ -21,4 +21,10 @@
       width: min(96%, 81.375rem);
     }
   }
+
+  .bg-pentagon{
+    @apply bg-no-repeat bg-center;
+    background-image: url(/bg-images/bg-pentagon.svg);
+    background-size: 14.1875rem 14.1875rem;
+  }
 }
