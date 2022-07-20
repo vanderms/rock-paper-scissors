@@ -2,6 +2,7 @@ import { Header } from "./components/sections/header/header";
 import { GameSection } from "./components/sections/game/game";
 import { useState } from "react";
 import { GameResult } from "./utilities/eval-result";
+import { RulesSection } from "./components/sections/rules/rules";
 
 const getInitialValue = () => {
   const value = localStorage.getItem("score");
@@ -30,9 +31,12 @@ export default function App() {
           bg-[radial-gradient(134.34%_134.34%_at_50%_0%,#1F3757_0%,_#131537_100%)]
       `}
       >
-        <div className="container flex flex-col items-center">
-          <Header score={score} />
-          <GameSection processResult={processResult} />
+        <div className="container">
+          <div className="flex flex-col items-center h-[40.875rem] lg:h-[43.5rem]">
+            <Header score={score} />
+            <GameSection processResult={processResult} />
+          </div>
+          <RulesSection />
         </div>
       </main>
     </>
