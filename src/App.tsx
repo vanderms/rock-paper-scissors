@@ -26,7 +26,7 @@ export default function App() {
   return (
     <>
       <main
-        className={`min-h-screen h-[48rem] w-full
+        className={`min-h-screen h-[48rem] w-full overflow-hidden
           bg-[radial-gradient(134.34%_134.34%_at_50%_0%,#1F3757_0%,_#131537_100%)]
       `}
       >

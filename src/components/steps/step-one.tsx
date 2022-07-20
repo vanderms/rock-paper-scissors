@@ -13,7 +13,7 @@ export const StepOne: React.FC<{ setUserPick: (item: ItemType) => void }> = ({
 
   return (
     <div className="mt-24 w-full h-[19.4375rem] relative bg-pentagon lg:w-[29.5rem] lg:h-[28.9375rem] lg:mx-auto lg:mt-12">
-      <label className="absolute w-24 h-24 lg:h-[9.25rem] lg:w-[9.25rem]  left-[34.73%] cursor-pointer grid">
+      <label className="absolute w-24 h-24 lg:h-[9.25rem] lg:w-[9.25rem]  left-[34.73%] cursor-pointer grid place-items-center item-hover">
         <input
           type="radio"
           name="game"
@@ -24,7 +24,7 @@ export const StepOne: React.FC<{ setUserPick: (item: ItemType) => void }> = ({
         <span className="sr-only">Scissors</span>
         <Item type={ItemType.SCISSORS} />
       </label>
-      <label className="absolute  w-24 h-24 lg:h-[9.25rem] lg:w-[9.25rem] top-[27.33%] cursor-pointer grid">
+      <label className="absolute  w-24 h-24 lg:h-[9.25rem] lg:w-[9.25rem] top-[27.33%] cursor-pointer grid place-items-center item-hover">
         <input
           type="radio"
           name="game"
@@ -35,7 +35,7 @@ export const StepOne: React.FC<{ setUserPick: (item: ItemType) => void }> = ({
         <span className="sr-only">Spock</span>
         <Item type={ItemType.SPOCK} />
       </label>
-      <label className="absolute w-24 h-24 lg:h-[9.25rem] lg:w-[9.25rem] top-[27.33%] right-0 cursor-pointer grid">
+      <label className="absolute w-24 h-24 lg:h-[9.25rem] lg:w-[9.25rem] top-[27.33%] right-0 cursor-pointer grid place-items-center item-hover">
         <input
           type="radio"
           name="game"
@@ -46,7 +46,7 @@ export const StepOne: React.FC<{ setUserPick: (item: ItemType) => void }> = ({
         <span className="sr-only">Paper</span>
         <Item type={ItemType.PAPER} />
       </label>
-      <label className="absolute w-24 h-24 lg:h-[9.25rem] lg:w-[9.25rem] bottom-0 left-[13.83%] cursor-pointer grid">
+      <label className="absolute w-24 h-24 lg:h-[9.25rem] lg:w-[9.25rem] bottom-0 left-[13.83%] cursor-pointer grid place-items-center item-hover">
         <input
           type="radio"
           name="game"
@@ -57,7 +57,7 @@ export const StepOne: React.FC<{ setUserPick: (item: ItemType) => void }> = ({
         <span className="sr-only">Lizard</span>
         <Item type={ItemType.LIZARD} />
       </label>
-      <label className="absolute w-24 h-24 lg:h-[9.25rem] lg:w-[9.25rem] bottom-0 right-[13.83%] cursor-pointer grid">
+      <label className="absolute w-24 h-24 lg:h-[9.25rem] lg:w-[9.25rem] bottom-0 right-[13.83%] cursor-pointer grid place-items-center item-hover">
         <span className="sr-only">Rock</span>
         <input
           type="radio"

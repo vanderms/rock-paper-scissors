@@ -27,4 +27,27 @@
     background-image: url(/bg-images/bg-pentagon.svg);
     background-size: 72.9903537% 74.4262295%;
   }
+
+  .item-hover:hover::before {
+    @apply absolute block bg-no-repeat bg-center bg-contain;
+    content: "";
+    width: 127.2727273%;
+    height: 125.2525253%;
+    background-image: url(/bg-images/hover.svg);
+  }
+
+  .bg-winner::before {
+    @apply absolute block bg-no-repeat bg-center bg-contain;
+    content: "";
+    width: 221.5384615%;
+    height: 218.4615385%;
+    background-image: url(/bg-images/winner.svg);
+  }
+
+  @media screen(lg) {
+    .bg-winner {
+      width: 250%;
+      height: 239.3333333%;
+    }
+  }
 }
